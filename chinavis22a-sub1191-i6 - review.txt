@@ -1,0 +1,51 @@
+The paper presents DiscretizOR, an interactive visualization system for exploring interpretable perceptual feature discretization for logistic regression (LR). DiscretizOR is a visualization system with multiple views, including a model evolution view that plots the pedigree between instances and information about individual instances, a feature assessment view that shows the quantitative distribution and positive rate performance of the feature, a nonlinear pattern view that refines exploration, and a control panel that forms the center of the interactive system and is responsible for triggering a series of events.
+
+The paper has a reasonable motivation for the interpretability of logistic regression, which is derived from collaboration with a domain experts. The authors developed a visualization system to address the derived tasks. Nevertheless, the paper also has some weaknesses, including unjustified visualization and interaction designs, weak case studies, and unclear writings. The detailed comments are listed below:
+
+
+Task and requirement analysis:
+---
+1. The title illustrates that the paper focuses on feature discretization, yet the derived tasks are beyond the scope. For example, T1 is regarding feature selection, T3 is regarding LR instances. Are these regarded as subtasks of feature discretization? Correspondingly, it seems that only case study 2 illustrates the process of feature discretization. 
+2. The work is dedicated to a specific topic. It would be easier for readers to understand the domain problem by introducing the usage scenarios and explaining the feature discretization process in the front sections. There are too many terms like LR instance, model instance, feature selection, feature discretization, which are related yet shall be better described.
+
+
+Related work:
+---
+1. The authors shall better organize the related work to discuss limitations of existing works, especially the second part of 'visual analysis for machine learning'. How are these visual analysis works for machine learning are related to the feature engineering? What does it mean to say 'we need to operate more complete manipulation for tasks'?
+2. The reference style needs to be revised. For example, 'Jinwook Seo et al.,' change to 'Seo et al. [6]', 'Towards better bus network' change to 'Wen et al. [18]'.
+
+Background:
+---
+1. I would suggest to put Sect. 3.1 as part of the related work section, which is not really background of the work.
+2. Instead, the descriptions in Sect. 4.4 could be refined and put as the background. 
+3. The authors are encouraged to follow Munzner's nested model when describing the requirements and the visualizations designs.
+
+Visual design:
+---
+1. A main component of the system is the model evolution view, in which the authors design a composite graphic to indicate feature contributions and the results, and arranged the graphics in a binary tree diagram to show the evolution. It's not clear how the tree diagram is constructed here, and why it is binary. 
+- First, the tree structure is not easy for comparing feature manipulations. It's difficult for me to understand which features have been added/adjusted.
+- The binary structure faces significant scalability issues. What will the system be like when more features are compared?
+2. The nonlinear pattern view is not really used. How does the view helps address the tasks?
+3. For such an interactive visual analytics system, it would be strongly encouraged to add a supplementary video illustrating the interactions.
+
+Case study:
+---
+1. As described above, the case study is brief and refers to only two views. How the system helps address the analytical tasks shall be better described.
+2. The expert feedback is very general. Please put more details regarding his expertise, his comments on the visualization design, and feedbacks on the system.
+
+
+Writing:
+---
+The paper's organization can be improved, and the writing needs throughout proof-readings. Here I list some of the problems:
+1. Grammar: There are many grammatical mistakes in this article, including singular and plural, third person, tense, and so on.
+- “LR in the field machine learning (ML)” -> missing “of” after “the field”
+- “User can keep the orange line” -> “Users”
+- “That why the root radar plot is always be a regular pentagon.” -> “That's why the root radar plot is always a regular pentagon.”
+2. Figures and formulas: They are too blurry. Please use higher resolution figures and formulas. Formulas should not be in picture format.
+3. Format:
+- The caption of picture 4 should be preceded by a space.
+- The format of the quoted figures in the paper needs to be unified.
+
+Overall I feel the paper is not ready for publication. I hope the comments are useful for the authors to improve the paper.
+
+1. Munzner, T. (2009). "A Nested Model for Visualization Design and Validation." IEEE Transactions on Visualization and Computer Graphics 15(6): 921-928.
